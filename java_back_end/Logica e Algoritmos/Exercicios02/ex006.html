@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Menu
+        var menu = "***MENU***\n"
+            menu+= "1) Blumenau\n"
+            menu+= "2) Pomerode\n"
+            menu+= "3) Gaspar\n"
+            menu+= "4) Timbó\n"
+            menu+= "5) Indaial\n"
+            menu+= "6) Finalizar votação"
+
+        // Voto
+        var voto
+
+        // Contadores
+        var blumenau = 0, pomerode = 0, gaspar = 0, timbo = 0, indaial = 0
+
+        // Laço
+        do{
+            voto = prompt(menu)
+
+            switch(voto){
+                case "1":
+                blumenau++
+                break
+
+                case "2":
+                pomerode++
+                break
+
+                case "3":
+                gaspar++
+                break
+
+                case "4":
+                timbo++
+                break
+
+                case "5":
+                indaial++
+                break
+
+                case "6":
+                alert("Votação finalizada com sucesso!")
+                break
+
+                default:
+                alert("Opção inválida")
+            }
+
+        }while(voto != 6)
+
+        // Resultado
+        document.write("Blumenau obteve "+blumenau+" voto(s)<br>")
+        document.write("Pomerode obteve "+pomerode+" voto(s)<br>")
+        document.write("Gaspar obteve "+gaspar+" voto(s)<br>")
+        document.write("Timbó obteve "+timbo+" voto(s)<br>")
+        document.write("Indaial obteve "+indaial+" voto(s)<br>")
+
+        // Total dos votos
+        var total = blumenau + pomerode + gaspar + timbo + indaial
+
+        // Percentual
+        var percentualBlumenau = (100/total) * blumenau
+        var percentualPomerode = (100/total) * pomerode
+        var percentualGaspar = (100/total) * gaspar
+        var percentualTimbo = (100/total) * timbo
+        var percentualIndaial = (100/total) * indaial
+
+        document.write("<hr>")
+        document.write("Blumenau "+percentualBlumenau.toFixed(2)+"%<br>")
+        document.write("Pomerode "+percentualPomerode.toFixed(2)+"%<br>")
+        document.write("Gaspar "+percentualGaspar.toFixed(2)+"%<br>")
+        document.write("Timbó "+percentualTimbo.toFixed(2)+"%")
+        document.write("Indaial "+percentualIndaial.toFixed(2)+"%")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        function cidade(opcao){
+            
+            switch(opcao){
+                case "Blumenau":
+                document.getElementById("texto").innerHTML = "Cidade onde é realizada a Oktoberfest"
+                break
+
+                case "Florianópolis":
+                document.getElementById("texto").innerHTML = "Capital de Santa Catarina"
+                break
+
+                case "Joinville":
+                document.getElementById("texto").innerHTML = "Maior cidade de Santa Catarina"
+                break
+                
+                default:
+                document.getElementById("texto").innerHTML = ""
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <select onchange="cidade(this.value)">
+        <option>Escolha uma cidade</option>
+        <option>Blumenau</option>
+        <option>Florianópolis</option>
+        <option>Joinville</option>
+    </select>
+
+    <p id="texto"></p>
+</body>
+</html>

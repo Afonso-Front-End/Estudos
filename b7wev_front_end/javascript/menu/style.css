@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'arial';
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.titulo{
+    width: 100vw;
+    height:100px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.icon-menu{
+    height: 100px;
+    padding: 10px;
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: darkgray;
+    height: 100vh;
+    padding: 10px;
+    display: none;
+}
+.menu-item a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.menu-item a:hover{
+    background-color: red;
+}
+.open{
+    display: block;
+}

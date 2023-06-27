@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor</title>
+
+    <script>
+
+        var nomes = ['Afonso', 'Ana', 'AnaLine', 'Beatriz']
+        function listar() {
+            let lista = document.querySelector('ul')
+            for (let index = 0; index < nomes.length; index++) {
+                let elemento = document.createElement('li')
+                // elemento.innerHTML = `Nome: ${nomes[index]}`
+                let texto = document.createTextNode(nomes[index])
+
+                elemento.appendChild(texto)
+                lista.appendChild(elemento)
+                
+            }
+        }
+      
+    </script>
+</head>
+<body onload="listar()">
+    <ul></ul>
+</body>
+</html>

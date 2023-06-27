@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Contadores
+        var contadorBruno = 0
+        var contadorCarla = 0
+        var total = 0
+
+        // Função
+        function votoBruno(){
+            contadorBruno += 1
+            total+=1
+            document.getElementById("resultados").innerHTML = "Bruno obteve "+contadorBruno+" votos."
+            document.getElementById("resultados").innerHTML += "<br>Carla obteve "+contadorCarla+" votos."
+            document.getElementById("resultados").innerHTML += "<hr>"
+            document.getElementById("resultados").innerHTML += "<br>Bruno obteve "+(100/total*contadorBruno)+"% votos."
+            document.getElementById("resultados").innerHTML += "<br>Carla obteve "+(100/total*contadorCarla)+"% votos."
+
+            if(contadorBruno > contadorCarla){
+                document.getElementById("resultados").innerHTML+= "<hr>Bruno está ganhando"
+            }else if(contadorBruno < contadorCarla){
+                document.getElementById("resultados").innerHTML+= "<hr>Carla está ganhando"
+            }else{
+                document.getElementById("resultados").innerHTML+= "<hr>Empate"
+            }
+        }
+
+        function votoCarla(){
+            contadorCarla += 1
+            total+=1
+            document.getElementById("resultados").innerHTML = "Bruno obteve "+contadorBruno+" votos."
+            document.getElementById("resultados").innerHTML += "<br>Bruno obteve "+contadorCarla+" votos."
+            document.getElementById("resultados").innerHTML += "<hr>"
+            document.getElementById("resultados").innerHTML += "<br>Bruno obteve "+(100/total*contadorBruno)+"% votos."
+            document.getElementById("resultados").innerHTML += "<br>Carla obteve "+(100/total*contadorCarla)+"% votos."
+
+            if(contadorBruno > contadorCarla){
+                document.getElementById("resultados").innerHTML+= "<hr>Bruno está ganhando"
+            }else if(contadorBruno < contadorCarla){
+                document.getElementById("resultados").innerHTML+= "<hr>Carla está ganhando"
+            }else{
+                document.getElementById("resultados").innerHTML+= "<hr>Empate"
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <p id="resultados"></p>
+    
+    <button onclick="votoBruno()">Bruno</button>
+    <button onclick="votoCarla()">Carla</button>
+
+</body>
+</html>

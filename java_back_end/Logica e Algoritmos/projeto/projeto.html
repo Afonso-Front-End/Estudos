@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Estilos.css -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <!-- Formulário -->
+    <form>
+        <input type="text" id="produto" placeholder="Produto" class="form-control">
+        <input type="text" id="marca" placeholder="Marca" class="form-control">
+        <input type="text" id="valor" placeholder="Valor" class="form-control">
+        <input type="button" value="Cadastrar" class="btn btn-success" id="btnCadastrar" onclick="cadastrar()">
+        <input type="button" value="Alterar" class="btn btn-warning" id="btnAlterar" onclick="alterar()">
+        <input type="button" value="Cancelar" class="btn btn-secondary" id="btnCancelar" onclick="cancelar()">
+    </form>
+
+    <!-- Tabela -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Valor</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+</body>
+</html>

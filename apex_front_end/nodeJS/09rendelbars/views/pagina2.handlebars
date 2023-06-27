@@ -1,0 +1,21 @@
+{{>menu}}
+<table>
+    <thead>
+        <tr>
+            <th>codigo</th>
+            <th>nome</th>
+            <th>email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each vetor}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+            </tr>
+        {{/each}}
+
+    </tbody>
+</table>

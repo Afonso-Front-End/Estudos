@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+    <script>
+        // vetor postagens
+        let vetor = []
+        // facth para requisições
+        // obter postagem
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(retorno => retorno.json())
+        .then(postagens => vetor = postagens)
+        .then(postagens => console.table(postagens))
+        .then(()=> listar())
+        
+        function listar(){
+            // obert elemento table
+            let table = document.getElementById('table')
+
+            // laço
+            for (let index = 0; index < vetor.length; index++) {
+                    
+                // criar linh de tabela
+                let linha = table.insertRow(-1)
+
+                // criar tres coluna
+                let colunaCodigo = linha.insertCell(0)
+                let colunaTitulo = linha.insertCell(1)
+                let colunaConteudo = linha.insertCell(2)
+
+                colunaCodigo.innerHTML = `${vetor[index].id}`
+                colunaTitulo.innerHTML = `${vetor[index].title}`
+                colunaConteudo.innerHTML = `${vetor[index].body}`
+ 
+            }
+
+        }
+    </script>   
+</head>
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Codigo</td>
+                <td>Titulo</td>
+                <td>Conteudo</td>
+            </tr>
+        </thead>
+
+        <tbody id="table"></tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Número
+        var numero
+
+        // Soma
+        var soma = 0
+
+        // Positivos e negativos
+        var positivos = 0, negativos = 0
+
+        // Contar quantas vezes o laço foi feito
+        var contador = 0
+
+        // Laço
+        do{
+            contador++
+
+            numero = parseInt(prompt("Informe um número"))
+
+            if(numero < 0){
+                negativos++
+            }else{
+                positivos++
+            }
+
+            soma += numero
+        }while(numero != 0)
+
+        // Retornar a soma
+        document.write("A soma é "+soma)
+
+        // Retornar a média
+        document.write("<br>A média dos valores é "+(soma / contador))
+
+        // Retornar positivos e negativos
+        document.write("<br>Positivos: "+positivos+"<br>Negativos: "+negativos);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function validar(){
+            var l1 = document.getElementById("l1").value
+            var l2 = document.getElementById("l2").value
+            var l3 = document.getElementById("l3").value
+            var l4 = document.getElementById("l4").value
+
+            if(l1 == l2 && l2 == l3 && l3 == l4){
+                document.getElementById("retorno").innerHTML = "É um quadrado"
+            }else{
+                document.getElementById("retorno").innerHTML = "Não é um quadrado"
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="number" id="l1">
+    <input type="number" id="l2">
+    <input type="number" id="l3">
+    <input type="number" id="l4">
+    <button onclick="validar">Validar</button>
+
+    <p id="retorno"></p>
+</body>
+</html>

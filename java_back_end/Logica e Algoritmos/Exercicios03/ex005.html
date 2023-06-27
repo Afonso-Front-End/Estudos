@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        function calcular(){
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+            var faltas = parseInt(document.getElementById("faltas").value)
+
+            var  media = (nota1+nota2+nota3)/3
+
+            if(faltas >= 11){
+                document.getElementById("resultado").innerHTML = "Reprovado(a) por faltas"
+            }else if(media >= 7){
+                document.getElementById("resultado").innerHTML = "Aprovado(a)"
+            }else{
+                document.getElementById("resultado").innerHTML = "Reprovado(a) por média"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="nota1">
+    <input type="number" id="nota2">
+    <input type="number" id="nota3">
+    <input type="number" id="faltas">
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16Pokedex</title>
+
+    <style>
+        #lista{
+            display: flex;
+            flex-wrap: wrap;
+           border: none;
+           font-family: monospace;
+        }
+        div{
+            text-align: center;
+            gap: 4px;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+    </style>
+    <script>
+        // Obter pokemons da api
+        let requisicao = async () =>{
+            // Obter lista
+            let lista = document.getElementById('lista')
+
+            for(let index = 1 ; index < 152 ;index++){
+                let retorno = await fetch(`https://pokeapi.co/api/v2/pokemon/${index}`)
+                let dados =  await retorno.json()
+
+                let caixa = document.createElement('div')
+                let imgagem = document.createElement('img')
+                let paragrafo = document.createElement('p')
+                imgagem.src = dados.sprites.front_default
+
+                paragrafo.append(dados.name)
+                caixa.appendChild(paragrafo)
+                caixa.appendChild(imgagem)
+                lista.appendChild(caixa)
+
+            }   
+        }
+    </script>
+
+</head>
+<body onload="requisicao()">
+    <div id="lista">
+
+    </div>
+</body>
+</html>

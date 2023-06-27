@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function converter(){
+
+            var valor = document.getElementById("valor").value
+            var moeda = parseInt(document.getElementById("moeda").value)
+
+            switch(moeda){
+                case 1:
+                document.getElementById("resultado").innerHTML = valor / 5.00
+                break
+
+                case 2:
+                document.getElementById("resultado").innerHTML = valor / 6.00
+                break
+
+                case 3:
+                document.getElementById("resultado").innerHTML = valor / 7.00
+                break
+
+                case 4:
+                document.getElementById("resultado").innerHTML = valor * 5
+                break
+
+                case 5:
+                document.getElementById("resultado").innerHTML = valor * 6
+                break
+
+                case 5:
+                document.getElementById("resultado").innerHTML = valor * 7
+                break
+
+                default:
+                document.getElementById("resultado").innerHTML = ""
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="valor">
+
+    <select id="moeda">
+        <option value="0">Qual moeda deseja converter?</option>
+        <option value="1">Real para Dólar</option>
+        <option value="2">Real para Euro</option>
+        <option value="3">Real para Libra</option>
+        <option value="4">Dólar para Real</option>
+        <option value="5">Euro para Real</option>
+        <option value="6">Libra para Real</option>
+    </select>
+
+    <button onclick="converter()">Converter</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

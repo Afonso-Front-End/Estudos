@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto</title>
+
+    <script>
+        let teclado = () => {
+            // Obter elemento
+            let caixa = document.getElementById('caixa')
+            let texto1 = document.getElementById('texto-1')
+            let quantidade = document.getElementById('quantidade')
+            // exibir texto digitado nos paragrafos 
+            texto1.innerText = caixa.value
+
+
+            if(caixa.value.length == 0){
+                quantidade.innerHTML = 'Digite algo'
+            }else{
+                quantidade.innerHTML = `Foi digitado ${caixa.value.length} caracteres`
+            }
+        }
+
+        let exemplo2 = () =>{
+            let palavra = document.getElementById('palavra')
+            let termo = 'Front-end'
+            // palavra.innerHTML = termo.substr(2)
+            // palavra.innerHTML = termo.substr(2,2)
+            palavra.innerHTML = termo.substring(0,5)
+        }
+        let exemplo3 = () =>{
+            let letras = document.getElementById('letras')
+
+            let termo = 'Front-end'
+
+            // letras.innerText = termo.charAt(1)
+
+            // for (let index = 0; index < termo.length; index++) {
+            //     letras.innerHTML += `${index+1} Posição ${termo.charAt(index)}<br>`
+            // }
+
+            for (let index = 0; index < termo.length; index++) {
+                  letras.innerHTML += `${index+1}(${termo.charAt(index)}) <br>`
+             }
+        }
+
+        
+    </script>
+</head>
+<body onload="exemplo3()">
+    <!-- Exemplo 01 -->
+    <input type="text" id="caixa" onkeyup="teclado()">
+    <p id="texto-1"></p>
+    <p id="texto-2"></p>
+    <p id="quantidade"></p>
+    <hr>
+    <!-- Exemplo 02 -->
+    <p id="palavra"></p>
+
+    <!-- Exemplo 03 -->
+
+    <p id="letras"></p>
+</body>
+</html>

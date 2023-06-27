@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Contador erros/acertos
+        var erros = 0, acertos = 0
+
+        // Letras
+        var letraE = false
+        var letraS = false
+        var letraT = false
+        var letraU = false
+        var letraD = false
+        var letraA = false
+        var letraR = false
+
+        // Continuar laco
+        var continuarLaco = true
+
+        // Laço
+        do{
+
+            // Informar as letras ou _
+            var mensagem = "Informe uma letra:\n"
+            
+            if(letraE == false){mensagem+= " _ "}else{mensagem+= " E "}
+            if(letraS == false){mensagem+= " _ "}else{mensagem+= " S "}
+            if(letraT == false){mensagem+= " _ "}else{mensagem+= " T "}
+            if(letraU == false){mensagem+= " _ "}else{mensagem+= " U "}
+            if(letraD == false){mensagem+= " _ "}else{mensagem+= " D "}
+            if(letraA == false){mensagem+= " _ "}else{mensagem+= " A "}
+            if(letraR == false){mensagem+= " _ "}else{mensagem+= " R "}
+
+            var letra = prompt(mensagem)
+
+            // Condicional
+            if(letra == "e"){
+                letraE = true
+                acertos++
+            }else if(letra == "s"){
+                letraS = true
+                acertos++
+            }else if(letra == "t"){
+                letraT = true
+                acertos++
+            }else if(letra == "u"){
+                letraU = true
+                acertos++
+            }else if(letra == "d"){
+                letraD = true
+                acertos++
+            }else if(letra == "a"){
+                letraA = true
+                acertos++
+            }else if(letra == "r"){
+                letraR = true
+                acertos++
+            }else{
+                erros++
+            }
+
+            // Verificar se sairá do laço
+            if(erros == 7 || acertos == 7){
+                continuarLaco = false
+            }
+        }while(continuarLaco == true)
+
+        // Condicional
+        if(erros == 7){
+            document.write("A palavra era ESTUDAR")
+        }else{
+            document.write("Parabéns, você acertou a palavra ESTUDAR!")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de atributos</title>
+    <style>
+        .imagen{
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img class="imagen" src="img/pexels-nana-lapushkina-11519125.jpg" data-animal="Gata1" alt=""><br>
+
+    <button onclick="trocarimg('pexels-nana-lapushkina-11519125.jpg', 'Gata1')">foto1</button>
+    <button onclick="trocarimg('pexels-tatiana-bulgakova-9298346.jpg', 'Gata2')">foto2</button>
+    <button onclick="verfoto()">Qual é a foto</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function calcular(){
+            // Obter o tipo de temperatura
+            var tipo = parseInt(document.getElementById("tipo").value)
+
+            // Obter o valor
+            var valor = parseInt(document.getElementById("valor").value)
+
+            // Condicional
+            if(tipo == 1){
+                var calculo = ((valor - 32)/1.8);
+                document.getElementById("resultado").innerHTML = ("Celsius: "+calculo.toFixed(0))
+            }else{
+                var calculo = ((valor * 1.8)+32);
+                document.getElementById("resultado").innerHTML = ("Fahrenheit: "+calculo.toFixed(0))
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="valor" placeholder="valor">
+
+    <select id="tipo">
+        <option value="1">Fahrenheit para Celsius</option>
+        <option value="2">Celsius para Fahrenheit</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

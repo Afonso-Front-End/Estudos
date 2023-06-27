@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        //Menu
+        var menu = '***MENU***\n'
+            menu+= '1) Ana\n'
+            menu+= '2) João\n'
+            menu+= '3) Jaqueline\n'
+            menu+= '4) Paulo\n'
+            menu+= '5) Finalizar Votação\n'
+        //voto
+        var voto 
+
+        //contadores
+        var ana = 0, joao = 0, jaqueline = 0, paulo = 0
+
+        //laço
+        do{
+            voto = prompt(menu)
+
+            switch(voto){
+                case'1':
+                ana++
+                break
+
+                case'2':
+                joao++
+                break
+
+                case'3':
+                jaqueline++
+                break
+
+                case'4':
+                paulo++
+                break
+
+                case'5':
+                alert('Votação finalizada com sucesso!')
+                break
+
+                default:
+                    alert('Opção invalida!')
+            }
+        }while(voto != 5)
+
+        //resultado
+        document.write('Ana Obteve '+ana+' Votos<br>')
+        document.write('João Obteve '+joao+' Votos<br>')
+        document.write('Jaqueline Obteve '+jaqueline+' Votos<br>')
+        document.write('Paulo Obteve '+paulo+' Votos<br>')
+        
+        //total de votos
+        var total = ana = joao + jaqueline + paulo
+
+        //percentual
+        var percentualana = (100/total) * ana
+        var percentualjoao = (100/total) * joao
+        var percentualjaqueline= (100/total) * jaqueline
+        var percentualanapaulo = (100/total) * paulo
+
+        document.write('<hr>')
+        document.write('Ana'+percentualana.toFixed(2)+'%<br>')
+        document.write('joao'+percentualjoao.toFixed(2)+'%<br>')
+        document.write('Jaqueline'+percentualjaqueline.toFixed(2)+'%<br>')
+        document.write('Paulo'+percentualanapaulo.toFixed(2)+'%<br>')
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Soma
+        function somar(){
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+
+            document.getElementById("resultado").innerHTML = "A soma é: " + (numero1+numero2)
+        }
+
+        // Subtração
+        function subtrair(){
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+
+            document.getElementById("resultado").innerHTML = "A subtração é: " + (numero1-numero2)
+        }
+
+        // Multiplicação
+        function multiplicar(){
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+
+            document.getElementById("resultado").innerHTML = "A multiplicação é: " + (numero1*numero2)
+        }
+
+        // Divisão
+        function dividir(){
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+
+            document.getElementById("resultado").innerHTML = "A divisão é: " + (numero1/numero2)
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <hr>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+    <p id="resultado"></p>
+</body>
+</html>

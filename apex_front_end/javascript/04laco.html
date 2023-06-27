@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços</title>
+
+    <script>
+        
+        function calculo(e) {
+            let numero = document.getElementById('numero').value
+            let table = document.getElementById('tabuada')
+            table.innerHTML = ''
+            for (let indice = 0; indice < 11; indice++){
+                table.innerHTML += `${numero} x ${indice} = ${numero * indice} <br>`
+                document.addEventListener('keypress' , (event)=>{
+                    if(event.keyCode == 13){
+                        table.innerHTML += `${numero} x ${indice} = ${numero * indice} <br>`
+                    }else{
+                        table.innerHTML = ''
+                    }
+                })
+                
+            }
+            
+        }
+        
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 5px;
+        }
+        input, button {
+            width: 200px;
+            padding: 0.5rem;
+            border: 1px solid grey;
+            outline: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="number"
+    placeholder="digite um number" 
+    id="numero">
+    <!--||-->
+    <button onclick="calculo()">
+        gerar tabuada
+    </button>
+
+    <div id="tabuada">
+        
+    </div>
+</body>
+</html>

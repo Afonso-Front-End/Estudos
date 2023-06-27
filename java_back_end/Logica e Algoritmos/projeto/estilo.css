@@ -1,0 +1,13 @@
+form{
+    width: 600px;
+    margin: 0 auto;
+}
+
+input{
+    margin-top: 15px;
+}
+
+#btnAlterar,
+#btnCancelar{
+    display: none;
+}

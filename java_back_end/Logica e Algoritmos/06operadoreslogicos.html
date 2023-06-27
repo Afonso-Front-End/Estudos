@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores logicos</title>
+
+    <script>
+        //obter valor da compra
+        var valor = prompt('Informe o valor da compra')
+
+        //obter forma de pagamento
+        var pagamento = prompt('1) a vista \n2) A prazo')
+        if(valor >= 100 && pagamento == '1'){
+            document.write('R$'+ valor * 0.9)
+        }else{
+            document.write('R$'+ valor)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

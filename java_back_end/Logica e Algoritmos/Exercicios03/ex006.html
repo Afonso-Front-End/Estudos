@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function calcular(){
+            var valor = document.getElementById("valor").value
+            var pagamento = parseInt(document.getElementById("pagamento").value)
+
+            if(pagamento == 1){
+                document.getElementById("total").innerHTML = valor * 0.9
+            }else{
+                document.getElementById("total").innerHTML = valor
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type="number" id="valor" placeholder="Valor">
+
+    <select id="pagamento">
+        <option value="1">A vista</option>
+        <option value="2">A prazo</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="total"></p>
+</body>
+</html>
