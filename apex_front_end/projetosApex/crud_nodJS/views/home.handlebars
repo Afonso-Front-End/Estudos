@@ -1,0 +1,30 @@
+{{>mensagem}}
+
+<form action="/cadastrar" method="post">
+    <h1>CADASTRO</h1>
+    <input type="text" placeholder="Nome" name="nome" class="form-control">
+    <input type="number" placeholder="Idade" name="idade" class="form-control">
+    <input type="submit" value="Enviar" class="btn btn-primary">
+    {{!-- Tabela --}}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th id="remover">Remover</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each pessoas}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{nome}}</td>
+                    <td>{{idade}}</td>
+                    <td><a href="/remover/{{codigo}}">Remover</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</form>
