@@ -4,11 +4,12 @@ const express = require('express')
 // Importar express-hadlebars
 const {engine} = require('express-handlebars')
 
+// Importar o modulo mysql
+const mysql = require('mysql2')
+ 
 // Importar o modulo path (responsavel por gerenciar diretorios)
 const path = require('path')
 
-// Importar o modulo mysql
-const mysql = require('mysql2')
 
 // efetuar a conexao
 const conexao = mysql.createConnection({
@@ -23,6 +24,7 @@ conexao.connect((erro)=>{
     if(erro) throw erro;
     console.log('Conexão efetuada')
 })
+
 
 // Criar um objeto para ter acesso as funionalidades do express
 const app = express()
@@ -40,10 +42,10 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+
 // Rotas 
 app.get('/', (req, res)=>{
-    // res.render('home')
-    // Sql
+    // Sql  
     let sql = 'SELECT * FROM pessoas'
 
     // Executar comando sql
@@ -66,7 +68,7 @@ app.get('/:mensagem', (req, res) => {
             res.render('home', { 'okCadastro': true, 'pessoas':returne})
             break;
             
-            case 'falhaCadastro':
+            case 'falhaCadastro':   
             res.render('home', { 'falhaCadastro': true, 'pessoas':returne })
             break
     
