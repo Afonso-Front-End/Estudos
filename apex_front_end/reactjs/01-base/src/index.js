@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // Estrutura
 const estrutura = 
 <div>
-    <h1>Meu primeiro render</h1>,
+    <h1>Meu primeiro render</h1> 
     <p>Testando...</p>
 </div>
 

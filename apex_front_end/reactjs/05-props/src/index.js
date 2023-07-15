@@ -14,6 +14,6 @@ class Componente extends React.Component{
     }
 }
 // Json
-
 var dados = {nome:'Afonso', idade:24}
+
 ReactDOM.render(<Componente informacao={dados}/>, document.getElementById('root'))

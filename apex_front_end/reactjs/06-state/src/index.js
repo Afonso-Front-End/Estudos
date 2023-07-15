@@ -7,7 +7,8 @@ class Componete extends React.Component{
     // construtor
     constructor(props){
         super(props)
-
+        
+        // states Variaveis
         this.state = {nome:'Afonso'}
     }
 
