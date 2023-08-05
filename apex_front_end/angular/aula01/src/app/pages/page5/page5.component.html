@@ -1,0 +1,28 @@
+<form class="form">
+    <input type="text" placeholder="Nome" [(ngModel)]="pessoa.nome" name="nome" class="form-control">
+    <input type="text" placeholder="Email" [(ngModel)]="pessoa.email" name="email" class="form-control">
+    <input type="text" placeholder="Cidade" [(ngModel)]="pessoa.cidade" name="cidade" class="form-control">
+    <input type="number" placeholder="Idade" [(ngModel)]="pessoa.idade" name="idade" class="form-control">
+    <input type="button" value="Cadastrar" (click)="cadastrar()" class="btn btn-primary form-control">
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cidade</th>
+            <th>Idade</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let d of dados; let indice = index">
+            <td>{{d.nome}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.cidade}}</td>
+            <td>{{d.idade}}</td>
+            <td><button class="btn btn-danger" (click)="remover(indice)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
