@@ -18,7 +18,7 @@ export class Page6Component {
   // COntrutor
   constructor(private requisicao:PostagemsService){}
 
-  // Inicializar
+  // Inicializarz
   ngOnInit(){
     this.obterPostagems()
   }
